@@ -28,7 +28,7 @@ function addProduct() {
 	html += "<td>" + products[i].product_desc + "</td>";
         html += "<td>" + products[i].product_qty + "</td>";
         html += "<td>" + products[i].product_price + "</td>";
-        html += "<td><button class='btn btn-danger' type='submit' onClick='deleteProduct(\"" + products[i].product_id + "\", this);'/>Delete Item</button> &nbsp <button class='btn btn-primary' type='submit' onClick='addCart(\"" + products[i].product_id + "\", this);'/>Add to Cart</button></td>";
+        html +="<th></th><th><th><th></th><td><button class='btn btn-danger'>Remove</button></td>";
         html += "</tr>";
     }
     html += "</table>";
