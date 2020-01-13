@@ -35,16 +35,16 @@ function addProduct() {
     document.getElementById("demo").innerHTML = html;
 }
 
-function deleteProduct(product_id, e) {
-    e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode);
+function removeAnItem(product_id, e) {
+    e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode.parentNode);
     for (var i = 0; i < products.length; i++) {
         if (products[i].product_id == product_id) {
             products.splice(i, 1);
         }
     }
 }
-
-function addCart(product_id) {
+//Add an Item in the cart
+function addAnItem() {
     for (var i = 0; i < products.length; i++) {
         if (products[i].product_id == product_id) {
             var cartItem = null;
@@ -64,9 +64,7 @@ function addCart(product_id) {
             }
         }
     }
-
     renderCartTable();
-
 }
 
 function renderCartTable() {
@@ -74,7 +72,7 @@ var html = '';
 var ele = document.getElementById("demo2");
 ele.innerHTML = '';
 
-html += "<table id='tblCart' border='1|1'>";
+html += "<table id='tblCart' border='1|1' align='center'>";
 // html += "<tr><td>Product ID</td>";
 html += "<td>Product Description</td>";
 html += "<td>Quantity</td>";
